@@ -1,6 +1,6 @@
 # Zombie_Hunter
 
-image or gif
+![Test Image 3](/Image/header.png)
 
 ## Overview
 
