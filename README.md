@@ -1,6 +1,6 @@
 # Zombie_Hunter
 
-![Test Image 3](/Image/header.png)
+![Test Image 3](/header.png)
 
 ## Overview
 
