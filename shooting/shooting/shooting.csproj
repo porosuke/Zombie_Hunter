@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{729DCF11-5ED7-4562-A9C5-6B912168980C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>shooting</RootNamespace>
+    <AssemblyName>shooting</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsBullet_E.cs" />
+    <Compile Include="clsBullet_P.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Key.cs" />
+    <Compile Include="Move.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maptip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HG.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AR.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SG.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SR.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="KN.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weapon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zombie1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zombie2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reference.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ar_c0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ar_c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ar_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ar_s0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ar_s1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dokuo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hg_c0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hg_c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hg_s0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hg_s1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knife.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knife_r0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knife_r1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knife_r2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knife1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knife2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knife3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knife4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\knife5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\m_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sg_c0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sg_c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sg_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sg_s0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sg_s1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sr_c0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sr_c1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sr_r.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sr_r0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sr_r1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_sub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
